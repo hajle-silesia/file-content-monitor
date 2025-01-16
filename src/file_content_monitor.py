@@ -18,6 +18,7 @@ class FileContentMonitor:
         self._content = new_raw_content
 
     def _notify(self):
-        self._producer.send(topic="file-content-monitor-topic",
-                            value=self.content,
-                            )
+        self._producer.send(
+            topic="file-content-monitor-topic",
+            value=self.content,
+        )

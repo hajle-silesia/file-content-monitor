@@ -36,5 +36,5 @@ class TestFileContentMonitor(unittest.TestCase):
         self.assertEqual(self.nonempty_raw_content, self.file_content_monitor.content)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
