@@ -25,16 +25,16 @@ class TestFileContentMonitor(unittest.TestCase):
 
         self.file_content_monitor = FileContentMonitor(self.producer)
 
-    def test_Should_GetEmptyContent_When_UpdatedWithEmptyContent(self):
+    def test_should_get_empty_content_when_updated_with_empty_content(self):
         self.file_content_monitor.update("")
 
-        self.assertEqual("", self.file_content_monitor.content)
+        assert self.file_content_monitor.content == ""
 
-    def test_Should_GetContent_When_UpdatedWithNonemptyContent(self):
+    def test_should_get_content_when_updated_with_nonempty_content(self):
         self.file_content_monitor.update(self.nonempty_raw_content)
 
-        self.assertEqual(self.nonempty_raw_content, self.file_content_monitor.content)
+        assert self.nonempty_raw_content == self.file_content_monitor.content
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
